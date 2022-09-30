@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Move Effect - Neko</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="hero">
+        <h1>My love <span>Neko</span></h1>
+        <div id="focus"></div>
+    </div>
+    <div id="typing">My love <span>Neko yang selalu</span></div>
+        <div id="line">|</div>
+
+    <script>
+        let focus = document.getElementById("focus");
+
+        let focusHalfWidth = focus.offsetWidth/2;
+
+        document.onmousemove = function(e){
+            focus.style.left = e.pageX - focusHalfWidth + "px";
+            focus.style.top = e.pageY - focusHalfWidth + "px";
+        }
+
+
+
+
+    </script>
+</body>
+</html>
